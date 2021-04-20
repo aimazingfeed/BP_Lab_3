@@ -5,5 +5,5 @@ void Aquaterrial::fly()
 }
 void Aquaterrial::walk()
 {
-	::Aerial::movement();
+	::Terrestrial::movement();
 }
