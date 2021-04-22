@@ -1,9 +1,0 @@
-#pragma once
-#include <iostream>
-#include <string>
-#include "Terrestrial.h"
-#include "Aerial.h"
-#include "Aquatic.h"
-#include "Organism.h"
-#include "Amphibian.h"
-#include "Aquaterrial.h"
