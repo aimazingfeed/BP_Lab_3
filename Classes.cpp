@@ -55,6 +55,7 @@ void Aeroterrial::movement()
 
 
 
+
 Amphibian::Amphibian(int age, int legsCount, int gillsCount) :Aquatic(gillsCount), Terrestrial(legsCount)
 {
 	Organism::m_age = age;
@@ -66,6 +67,7 @@ void Amphibian::movement()
 	::Aquatic::movement();
 	::Terrestrial::movement();
 }
+
 
 
 
