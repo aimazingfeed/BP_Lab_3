@@ -139,22 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Aerial.cpp" />
-    <ClCompile Include="Amphibian.cpp" />
-    <ClCompile Include="Aquaterrial.cpp" />
-    <ClCompile Include="Aquatic.cpp" />
+    <ClCompile Include="Classes.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Organism.cpp" />
-    <ClCompile Include="Terrestrial.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Aerial.h" />
-    <ClInclude Include="Amphibian.h" />
-    <ClInclude Include="Aquaterrial.h" />
-    <ClInclude Include="Aquatic.h" />
-    <ClInclude Include="Header.h" />
-    <ClInclude Include="Organism.h" />
-    <ClInclude Include="Terrestrial.h" />
+    <ClInclude Include="Classes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
