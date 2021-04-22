@@ -46,14 +46,14 @@ Aeroterrial::Aeroterrial(int age, int legsCount, int wingsCount) : Aerial(wingsC
 	Organism::m_age = age;
 }
 
-void Aeroterrial::fly()
+
+void Aeroterrial::movement()
 {
 	::Aerial::movement();
-}
-void Aeroterrial::walk()
-{
 	::Terrestrial::movement();
 }
+
+
 
 
 Amphibian::Amphibian(int age, int legsCount, int gillsCount) :Aquatic(gillsCount), Terrestrial(legsCount)
@@ -61,13 +61,13 @@ Amphibian::Amphibian(int age, int legsCount, int gillsCount) :Aquatic(gillsCount
 	Organism::m_age = age;
 }
 
-void Amphibian::swim()
+
+void Amphibian::movement()
 {
 	::Aquatic::movement();
-}
-void Amphibian::walk()
-{
 	::Terrestrial::movement();
 }
+
+
 
 

@@ -8,7 +8,7 @@ public:
 	Organism();
 };
 
-class Aerial :public Organism
+class Aerial : virtual public Organism
 {
 protected:
 	void movement() override;
@@ -17,7 +17,7 @@ public:
 	Aerial(int);
 };
 
-class Aquatic :public Organism
+class Aquatic : virtual public Organism
 {
 protected:
 	void movement() override;
@@ -26,7 +26,7 @@ public:
 	Aquatic(int);
 };
 
-class Terrestrial :public Organism
+class Terrestrial : virtual public Organism
 {
 protected:
 	void movement() override;
@@ -38,19 +38,17 @@ public:
 class Amphibian : public Aquatic, public Terrestrial
 {
 public:
-	void swim();
-	void walk();
-	int m_age = Organism::m_age;
+	virtual void movement() override;
+
 	Amphibian(int, int, int);
 
 };
 
-class Aeroterrial :public Aerial, public Terrestrial
+class Aeroterrial : public Aerial, public Terrestrial
 {
 public:
-	void fly();
-	void walk();
-	int m_age = Organism::m_age;
+	virtual void movement() override;
+	
 	Aeroterrial(int, int, int);
 
 };

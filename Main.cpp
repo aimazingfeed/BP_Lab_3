@@ -1,12 +1,13 @@
 #pragma once
-#include "Header.h"
+#include "Classes.h"
 
 int main()
 {
-	Amphibian a;
-	a.swim();
-	a.walk();
-	Aquaterrial b;
-	b.fly();
-	b.walk();
+	Amphibian a(1,1,1);
+	a.movement();
+	std::cout << a.m_age << std::endl << std::endl;
+
+	Aeroterrial b(2, 2, 2);
+	b.movement();
+	std::cout << b.m_age <<std::endl << std::endl;
 }
