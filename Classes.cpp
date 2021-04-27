@@ -9,6 +9,7 @@ Organism::Organism() {
 }
 
 void Organism::show() {
+	std::cout << m_age << std::endl;
 	std::cout << m_name << std::endl;
 }
 
