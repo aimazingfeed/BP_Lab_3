@@ -1,11 +1,13 @@
 #include <iostream>
+using namespace std;
 class Organism
 {
 public:
 	int m_age;
+	string m_name;
 	virtual void movement() = 0;
 	virtual void show();
-	Organism(int);
+	Organism(int, string);
 	Organism();
 };
 
@@ -44,7 +46,7 @@ class Amphibian : public Aquatic, public Terrestrial
 public:
 	virtual void movement() override;
 	virtual void show() override;
-	Amphibian(int, int, int);
+	Amphibian(int, int, int, string);
 
 };
 
@@ -53,6 +55,6 @@ class Aeroterrial : public Aerial, public Terrestrial
 public:
 	virtual void movement() override;
 	virtual void show() override;
-	Aeroterrial(int, int, int);
+	Aeroterrial(int, int, int, string);
 
 };

@@ -2,14 +2,14 @@
 
 
 
-Organism::Organism(int age) : m_age(age) {
+Organism::Organism(int age, string name) : m_age(age), m_name(name) {
 }
 
 Organism::Organism() {
 }
 
 void Organism::show() {
-
+	std::cout << m_name << std::endl;
 }
 
 Aerial::Aerial(int wingsCount) : m_wingsCount(wingsCount) {
@@ -21,6 +21,7 @@ void Aerial::movement() {
 
 void Aerial::show() {
 	std::cout << m_wingsCount << std::endl;
+
 }
 
 Aquatic::Aquatic(int gillsCount) :m_gillsCount(gillsCount) {
@@ -32,6 +33,7 @@ void Aquatic::movement() {
 
 void Aquatic::show() {
 	std::cout << m_gillsCount << std::endl;
+	
 }
 
 
@@ -44,12 +46,14 @@ void Terrestrial::movement() {
 
 void Terrestrial::show() {
 	std::cout << m_legsCount << std::endl;
+	
 }
 
 
 
-Aeroterrial::Aeroterrial(int age, int legsCount, int wingsCount) : Aerial(wingsCount), Terrestrial(legsCount) {
+Aeroterrial::Aeroterrial(int age, int legsCount, int wingsCount, string name) : Aerial(wingsCount), Terrestrial(legsCount) {
 	Organism::m_age = age;
+	Organism::m_name = name;
 }
 
 
@@ -61,11 +65,13 @@ void Aeroterrial::movement() {
 void Aeroterrial::show() {
 	::Aerial::show();
 	::Terrestrial::show();
+	::Organism::show();
 }
 
 
-Amphibian::Amphibian(int age, int legsCount, int gillsCount) :Aquatic(gillsCount), Terrestrial(legsCount) {
+Amphibian::Amphibian(int age, int legsCount, int gillsCount, string name) :Aquatic(gillsCount), Terrestrial(legsCount) {
 	Organism::m_age = age;
+	Organism::m_name = name;
 }
 
 
@@ -77,5 +83,6 @@ void Amphibian::movement() {
 void Amphibian::show() {
 	::Aquatic::show();
 	::Terrestrial::show();
+	::Organism::show();
 }
 

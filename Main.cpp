@@ -3,8 +3,8 @@
 
 int main()
 {
-	Amphibian a(1, 1, 1);
-	Aeroterrial b(2, 2, 2);
+	Amphibian a(1, 1, 1, "name_a");
+	Aeroterrial b(2, 2, 2, "name_b");
 	a.movement();
 	a.show();
 	b.movement();
