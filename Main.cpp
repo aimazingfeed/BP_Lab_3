@@ -3,11 +3,10 @@
 
 int main()
 {
-	Amphibian a(1,1,1);
-	a.movement();
-	std::cout << a.m_age << std::endl << std::endl;
-
+	Amphibian a(1, 1, 1);
 	Aeroterrial b(2, 2, 2);
+	a.movement();
+	a.show();
 	b.movement();
-	std::cout << b.m_age <<std::endl << std::endl;
+	b.show();
 }
