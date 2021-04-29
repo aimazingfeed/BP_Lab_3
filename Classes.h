@@ -2,13 +2,15 @@
 using namespace std;
 class Organism
 {
-public:
+protected:
 	int m_age;
 	string m_name;
+public:
 	virtual void movement() = 0;
 	virtual void show();
 	Organism(int, string);
 	Organism();
+	~Organism();
 };
 
 class Aerial : virtual public Organism
@@ -16,8 +18,9 @@ class Aerial : virtual public Organism
 protected:
 	void movement() override;
 	virtual void show() override;
-public:
 	int m_wingsCount;
+public:
+	void aerialMethod();
 	Aerial(int);
 };
 
@@ -26,8 +29,9 @@ class Aquatic : virtual public Organism
 protected:
 	void movement() override;
 	virtual void show() override;
-public:
 	int m_gillsCount;
+public:
+	void aquaticMethod();
 	Aquatic(int);
 };
 
@@ -36,8 +40,9 @@ class Terrestrial : virtual public Organism
 protected:
 	void movement() override;
 	virtual void show() override;
-public:
 	int m_legsCount;
+public:
+	void terrestrialMethod();
 	Terrestrial(int);
 };
 

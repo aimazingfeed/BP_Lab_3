@@ -8,12 +8,18 @@ Organism::Organism(int age, string name) : m_age(age), m_name(name) {
 Organism::Organism() {
 }
 
+Organism::~Organism(){
+}
+
 void Organism::show() {
-	std::cout << m_age << std::endl;
 	std::cout << m_name << std::endl;
 }
 
 Aerial::Aerial(int wingsCount) : m_wingsCount(wingsCount) {
+}
+
+void Aerial::aerialMethod() {
+	cout << "Aerial method" << endl;
 }
 
 void Aerial::movement() {
@@ -28,6 +34,10 @@ void Aerial::show() {
 Aquatic::Aquatic(int gillsCount) :m_gillsCount(gillsCount) {
 }
 
+void Aquatic::aquaticMethod() {
+	cout << "Aquatic method" << endl;
+}
+
 void Aquatic::movement() {
 	std::cout << "I am swimming!" << std::endl;
 }
@@ -39,6 +49,10 @@ void Aquatic::show() {
 
 
 Terrestrial::Terrestrial(int legsCount) : m_legsCount(legsCount) {
+}
+
+void Terrestrial::terrestrialMethod() {
+	cout << "Terrestrial method" << endl;
 }
 
 void Terrestrial::movement() {
